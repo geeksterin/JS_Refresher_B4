@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Document Object Model</title>
+    <style>
+      .container {
+        width: 500px;
+        box-shadow: 0 0 10px black;
+        padding: 30px;
+        margin: 100px auto;
+      }
+    </style>
+    <script>
+      function fnChangeDocument() {
+        // console.log(document);
+        var h2Ref = document.getElementById("h2Id");
+        var divRef = document.getElementById("div1");
+        var pRef = document.getElementById("p1");
+
+        h2Ref.innerText = "Hello, Javascript";
+        h2Ref.style.color = "white";
+        divRef.style.backgroundColor = "red";
+        pRef.style.color = "cornsilk";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container" id="div1">
+      <div>
+        <h2 id="h2Id">Welcome to HTML World</h2>
+      </div>
+
+      <div>
+        <p id="p1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur
+          voluptate aut a magnam rerum, eos, omnis vitae cumque, quas nisi
+          incidunt aperiam facilis laudantium blanditiis perspiciatis fuga illum
+          enim quaerat quae? Magni, rem. Eius quis in eveniet nesciunt placeat,
+          asperiores doloremque inventore exercitationem quia nihil numquam,
+          nostrum molestias dicta. Maiores!
+        </p>
+      </div>
+      <button onclick="fnChangeDocument()">Change Document</button>
+    </div>
+  </body>
+</html>
