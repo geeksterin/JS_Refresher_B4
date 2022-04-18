@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        margin: 100px auto;
+        text-align: center;
+      }
+      button {
+        margin-right: 20px;
+      }
+    </style>
+    <script>
+      function changeToFriend() {
+        var imgRef = document.getElementById("img1");
+        imgRef.style.borderRadius = "0%";
+        imgRef.src =
+          "https://images.pexels.com/photos/8979939/pexels-photo-8979939.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+      }
+
+      function changeToFamily() {
+        var imgRef = document.getElementById("img1");
+        imgRef.src =
+          "https://images.pexels.com/photos/39691/family-pier-man-woman-39691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+        imgRef.style.borderRadius = "50%";
+      }
+
+      function fnChangeType() {
+        var ar = [100, 200, 800, 9000];
+        var products = {
+          pname: "Iphone 13",
+          price: "75000",
+          qty: 9,
+        };
+        var inputRef = document.getElementById("i2");
+        var buttonRef = document.getElementById("btn");
+
+        // for (var properties in buttonRef) {
+        //   console.log(properties);
+        // }
+        // for (var properties in inputRef) {
+        //   console.log(properties);
+        // }
+        for (var ele in products) {
+          console.log(products);
+          console.log(ele);
+          //   console.log(typeof ele);
+          //   console.log(products.ele);
+        }
+        console.log(products.pname);
+
+        if (inputRef.type === "password") {
+          inputRef.type = "text";
+          buttonRef.innerText = "Hide Password";
+        } else {
+          inputRef.type = "password";
+          buttonRef.innerText = "Show Password";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h2>Image Task</h2>
+      <img
+        id="img1"
+        src="https://images.pexels.com/photos/8979939/pexels-photo-8979939.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        width="300"
+        height="300"
+      /><br />
+      <button onclick="changeToFriend()">Friends</button>
+      <button onclick="changeToFamily()">Family</button>
+      <br /><br />
+      <br /><br />
+      <br /><br />
+      <h2>Show/Hide Password</h2>
+      <lable>Enter Password</lable>
+
+      <input type="password" id="i2" />
+      <button onclick="fnChangeType()" id="btn">Show Password</button>
+      <br /><br />
+      <br /><br />
+      <br /><br />
+    </div>
+  </body>
+</html>
