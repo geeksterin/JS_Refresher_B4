@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fnWish(currentEle, value) {
+        document.getElementById("h2").innerText =
+          currentEle.innerText + " " + "Geekster";
+
+        currentEle.style.color = "red";
+        console.log(value);
+      }
+    </script>
+  </head>
+  <body>
+    <h2 id="h2">Wish Message</h2>
+    <button onclick="fnWish(this)">Good Morning</button>
+    <button onclick="fnWish(this)">Good Evening</button>
+  </body>
+</html>

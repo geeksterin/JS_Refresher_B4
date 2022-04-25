@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fn(e) {
+        // console.log(e.clientX, e.clientY);
+        var img = document.querySelector("img");
+        img.style.position = "fixed";
+        img.style.top = e.clientY + "px";
+        img.style.left = e.clientX + "px";
+        document.querySelector("body").style.backgroundColor = "lightgreen";
+        // for (var property in e) {
+        //   console.log(property);
+        // }
+      }
+
+      function fn1() {
+        setTimeout(function () {
+          document.querySelector("body").style.backgroundColor = "lightcoral";
+        }, 5000);
+      }
+    </script>
+  </head>
+  <!-- <body onload="fn()"> -->
+  <body onmousemove="fn(event)" onload="fn1()">
+    <div style="height: 550px"></div>
+    <img
+      style="border-radius: 50%"
+      src="https://th.bing.com/th/id/OIP.bWWanHbgioAgQL82asChjwHaEq?pid=ImgDet&rs=1"
+      width="50"
+      height="50"
+    />
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        background-color: darkred;
+        color: white;
+        padding: 50px;
+        width: 300px;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+        margin-top: 100px;
+      }
+    </style>
+    <script>
+      function fnStopMarquee(obj) {
+        obj.stop();
+        document.getElementById("h2").innerText = "Marquee Stopped";
+        document.getElementById("h2").style.color = "red";
+      }
+      function fnStartMarquee(o) {
+        o.start();
+        document.getElementById("h2").innerText = "Marquee Started";
+        document.getElementById("h2").style.color = "green";
+      }
+    </script>
+  </head>
+  <body>
+    <h2 id="h2">Marquee Started</h2>
+    <marquee
+      onmouseover="fnStopMarquee(this)"
+      onmouseleave="fnStartMarquee(this)"
+    >
+      <h1>Welcome to Geekster</h1>
+    </marquee>
+  </body>
+</html>
